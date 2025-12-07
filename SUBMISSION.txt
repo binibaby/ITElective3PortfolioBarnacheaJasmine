@@ -1,0 +1,8 @@
+How to Submit:
+
+Submit a text file or paste into the STEP LMS containing:
+
+1. Live URL: https://binibaby.github.io/ITElective3PortfolioBarnacheaJasmine
+
+2. Repository URL: https://github.com/binibaby/ITElective3PortfolioBarnacheaJasmine
+
