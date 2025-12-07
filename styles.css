@@ -1,0 +1,347 @@
+/* Custom CSS Variables */
+:root {
+    --primary-color: #111827;
+    --secondary-color: #374151;
+    --text-color: #1f2937;
+    --bg-color: #f9fafb;
+    --border-color: #e5e7eb;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Custom Styles */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #374151;
+    background-color: #f9fafb;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Typography - Exact match to Bryl Lim's design */
+h1, h2, h3 {
+    font-weight: 700;
+    color: #111827;
+    letter-spacing: -0.025em;
+}
+
+h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+}
+
+p {
+    color: #374151;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+}
+
+/* Remove default link styles */
+a {
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+/* Card styles - Matching Bryl Lim's box design */
+.bg-white {
+    background-color: #ffffff;
+}
+
+.rounded-xl {
+    border-radius: 0.75rem;
+}
+
+.shadow-sm {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.border-gray-200 {
+    border-color: #e5e7eb;
+    border-width: 1px;
+}
+
+/* Button styles */
+button {
+    transition: all 0.2s ease;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Profile card spacing */
+.profile-card {
+    padding: 1.5rem;
+}
+
+/* Section spacing - Exact match */
+section {
+    margin-bottom: 1.5rem;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+/* Timeline styles */
+.timeline-item {
+    position: relative;
+    padding-left: 1rem;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 0.5rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #e5e7eb;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -0.25rem;
+    top: 0.25rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: #ffffff;
+    border: 2px solid #111827;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #ffffff;
+}
+
+/* Sticky sidebar */
+.sticky {
+    position: sticky;
+    top: 2rem;
+}
+
+/* Award badge gradient */
+.award-badge {
+    background: linear-gradient(to bottom right, #faf5ff, #eef2ff);
+    border: 1px solid #e9d5ff;
+}
+
+/* Pill tag styles */
+.pill-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.375rem 0.75rem;
+    background-color: #f3f4f6;
+    color: #374151;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.pill-tag:hover {
+    background-color: #e5e7eb;
+    transform: translateY(-1px);
+}
+
+/* Section icons */
+.section-icon {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-right: 0.5rem;
+}
+
+/* Profile image */
+.profile-image {
+    border: 2px solid #e5e7eb;
+    flex-shrink: 0;
+}
+
+/* Button icons spacing */
+button i,
+a i {
+    transition: transform 0.2s ease;
+}
+
+button:hover i.fa-arrow-right,
+a:hover i.fa-arrow-right {
+    transform: translateX(2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .lg\:col-span-4,
+    .lg\:col-span-5,
+    .lg\:col-span-3 {
+        grid-column: span 12;
+    }
+    
+    .sticky {
+        position: relative;
+        top: 0;
+    }
+    
+    .grid {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+    
+    h2 {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    
+    .rounded-xl {
+        border-radius: 0.5rem;
+    }
+    
+    .profile-card {
+        padding: 1rem;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
+
+/* Print styles */
+@media print {
+    #chat-button,
+    #dark-mode-toggle {
+        display: none;
+    }
+}
+
+/* Animation for mobile menu */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Floating chat button */
+#chat-button {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+#chat-button:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transform: translateY(-2px);
+}
+
+/* Card hover effects */
+.bg-white:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.2s ease;
+}
+
+/* Text color hierarchy */
+.text-gray-900 {
+    color: #111827;
+}
+
+.text-gray-700 {
+    color: #374151;
+}
+
+.text-gray-600 {
+    color: #4b5563;
+}
+
+.text-gray-500 {
+    color: #6b7280;
+}
+
+/* Spacing utilities */
+.space-y-6 > * + * {
+    margin-top: 1.5rem;
+}
+
+.space-y-8 > * + * {
+    margin-top: 2rem;
+}
+
+/* Border utilities */
+.border-t {
+    border-top-width: 1px;
+}
+
+.border-b {
+    border-bottom-width: 1px;
+}
+
+.border-gray-100 {
+    border-color: #f3f4f6;
+}
+
+.border-gray-200 {
+    border-color: #e5e7eb;
+}
+
+/* Focus states */
+button:focus,
+a:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Smooth transitions */
+* {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
